@@ -67,13 +67,19 @@
     padding: 0 100px;
     .stat {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
       align-items: center;
       margin: 0 20px;
       border: 2px solid $dark-grey;
       flex: 1;
       padding: 8px 12px;
       border-radius: 8px;
+      i{
+        font-size: 52px;
+        color: $dark-blue;
+        margin-right: 20px;
+      }
       p.value {
         font-weight: 500;
         font-size: 38px;

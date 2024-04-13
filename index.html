@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -26,10 +28,10 @@
             <img src="./assets/img/Flag.png" alt="">
         </a>
         <ul class="links">
-            <li>Üstünlüklər</li>
-            <li>Rəylər</li>
-            <li>Kontent</li>
-            <li>Əlaqə</li>
+            <li data-link="#advantages">Üstünlüklər</li>
+            <li data-link="#comments">Rəylər</li>
+            <li data-link="#content">Kontent</li>
+            <li data-link="#contact">Əlaqə</li>
         </ul>
         <div class="login">
             <a href="#" class="sign-btn">Daxil ol</a>
@@ -51,22 +53,30 @@
         </div>
         <div id="counts">
             <div class="stat">
-                <p class="value">80</p>
-                <p class="data">Dərs</p>
+                <i class="fas fa-video"></i>
+                <div class="d-flex flex-column align-items-center">
+                    <p class="value" data-count="80">0</p>
+                    <p class="data">Dərs</p>
+                </div>
             </div>
             <div class="stat">
-                <p class="value">128</p>
-                <p class="data">Tələbə</p>
+                <i class="fas fa-user"></i>
+                <div class="d-flex flex-column align-items-center">
+                    <p class="value" data-count="128">0</p>
+                    <p class="data">Tələbə</p>
+                </div>
             </div>
             <div class="stat">
-                <p class="value">92</p>
-                <p class="data">Məzun</p>
+                <div class="d-flex flex-column align-items-center">
+                    <p class="value" data-count="92">0</p>
+                    <p class="data">Məzun</p>
+                </div>
             </div>
         </div>
     </section>
     <section id="advantages">
         <h2>Üstünlüklərimiz</h2>
-        <div class="advantage">
+        <div id="advantage1" class="advantage">
             <div class="details">
                 <h3>Hər həftə 2 video dərs</h3>
                 <p>
@@ -79,8 +89,9 @@
         </div>
         <div class="advantage">
             <div class="details">
-                <h3>Dərs üzrə sınaq</h3>
-                <p>Hər bir dərsi tam şəkildə izlədikdən sonra öyrəndiklərinizin tətbiqi üçün yerləşdirilən sınaqları
+                <h3>Dərslər üzrə praktika</h3>
+                <p>Hər bir dərsi tam şəkildə izlədikdən sonra öyrəndiklərinizin praktiki tətbiqi üçün yerləşdirilən
+                    sınaqları
                     işləməklə öyrəndiklərinizi təkmilləşdirə bilərsiniz.</p>
             </div>
             <!-- <img src="./assets/img/mycollection/png/002-exam.png" alt=""> -->
@@ -98,7 +109,53 @@
     </section>
 
     <script>
-        
+        $(".links li").click(function () {
+            var target = $(this).attr("data-link");
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 60
+            }, 600);
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.stat p.value').each(function () {
+                var $this = $(this);
+                var countTo = $this.attr('data-count');
+
+                $({ countNum: $this.text() }).animate({
+                    countNum: countTo
+                },
+                    {
+                        duration: 2000, // Change duration as needed
+                        easing: 'linear',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+                    });
+            });
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('header').addClass('scrolled');
+                } else {
+                    $('header').removeClass('scrolled');
+                }
+                var windowHeight = $(window).height();
+                var scrollDistance = $(window).scrollTop();
+
+                $('.advantage').each(function () {
+                    var elementTop = $(this).offset().top;
+
+                    if (scrollDistance + windowHeight - 300 >= elementTop) {
+                        $(this).addClass('show');
+                    } else {
+                        $(this).removeClass('show');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 

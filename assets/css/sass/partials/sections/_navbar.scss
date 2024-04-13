@@ -8,8 +8,6 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
-  //background-color: white;
-  //box-shadow: 0 2px 6px 0px rgba(0,0,0,0.75);
   z-index: 5;
   .logo {
     width: 100px;
@@ -29,10 +27,22 @@
       cursor: pointer;
       font-weight: 500;
       color: $dark-blue;
-      transition: 0.3s;
+      transition: 0.4s ease;
       font-size: 18px;
+      position: relative;
+      &::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0px;
+        background-color: $light-blue;
+        transition: width .3s ease;
+      }
       &:hover {
         color: $light-blue;
+        &::after{
+          width: 100%;
+        }
       }
     }
   }
@@ -57,4 +67,10 @@
       color: white;
     }
   }
+}
+
+.scrolled {
+  padding: 20px 200px !important;
+  background-color: white;
+  box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.75);
 }
