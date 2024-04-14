@@ -1,89 +1,262 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.11.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.11.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.11.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<html lang="az">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>Yagmur. Salaaaam</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sertifikatlı Alman dili hazırlığı">
+  <title>Alman dili</title>
+  <link rel="icon" type="image/png" href="/Images/Flag.png">
+  <link rel="stylesheet" href="./assets/css/sass/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <header id="navbar">
+    <a class="logo" href="./index.html">
+      <img src="./assets/img/Flag.png" alt="">
+    </a>
+    <ul class="links">
+      <li data-link="#advantages">Üstünlüklər</li>
+      <li data-link="#comments">Rəylər</li>
+      <li data-link="#content">Kontent</li>
+      <li data-link="#contact">Əlaqə</li>
+    </ul>
+    <div class="login">
+      <a href="#" class="sign-btn">Daxil ol</a>
+      <a href="#" class="reg-btn">Qeydiyyat</a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </header>
+  <section id="home">
+    <div class="logo-slogan">
+      <div class="welcome">
+        <div class="slogan">
+          <h1>Sertifikatlı, onlayn <span class="d-inline-block">Alman dili öyrən</span></h1>
+          <p>Alman dilini dərindən, rahat və praktika ilə öyrənmək üçün doğru ünvan!</p>
+        </div>
+        <a class="getstart-btn" href="#">Öyrənməyə başla <i class="fas fa-long-arrow-alt-right"></i></a>
+      </div>
+      <div class="img">
+        <img src="./assets/img/Flag.png" alt="">
+      </div>
+    </div>
+    <div id="counts">
+      <div class="stat">
+        <i class="fas fa-video"></i>
+        <div class="d-flex flex-column align-items-center">
+          <p class="value" data-count="80">0</p>
+          <p class="data">Dərs</p>
+        </div>
+      </div>
+      <div class="stat">
+        <i class="fas fa-user"></i>
+        <div class="d-flex flex-column align-items-center">
+          <p class="value" data-count="128">0</p>
+          <p class="data">Tələbə</p>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="d-flex flex-column align-items-center">
+          <p class="value" data-count="92">0</p>
+          <p class="data">Məzun</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="advantages">
+    <h2>Üstünlüklərimiz</h2>
+    <div id="advantage1" class="advantage">
+      <div class="details">
+        <h3>Hər həftə 2 video dərs</h3>
+        <p>
+          Siz dərslərimizə aylıq abunəliklə qoşulduqdan sonra həftədə ümumi 2 video dərs sizin üçün əlçatan
+          olacaqdır. Dərsləri izləmək dəvamlı olaraq müəyyən müddətdən bir mümkün olur.
+        </p>
+      </div>
+      <!-- <img src="./assets/img/mycollection/png/003-video-marketing.png" alt=""> -->
+      <img src="./assets/img/online-lesson.jpg" alt="">
+    </div>
+    <div class="advantage">
+      <div class="details">
+        <h3>Dərslər üzrə praktika</h3>
+        <p>Hər bir dərsi tam şəkildə izlədikdən sonra öyrəndiklərinizin praktiki tətbiqi üçün yerləşdirilən
+          sınaqları
+          işləməklə öyrəndiklərinizi təkmilləşdirə bilərsiniz.</p>
+      </div>
+      <!-- <img src="./assets/img/mycollection/png/002-exam.png" alt=""> -->
+      <img src="./assets/img/online-exam.jpeg" alt="">
+    </div>
+    <div class="advantage">
+      <div class="details">
+        <h3>Rəsmi sertifikat</h3>
+        <p>Təlimi müvəfəqqiyətlə bitirdikdən sonra rəsmi sertifikatınızı rahatlıqla platformada şəxsi
+          kabinetinizdən PDF formatında əldə bilərsiniz.</p>
+      </div>
+      <!-- <img src="./assets/img/mycollection/png/001-certificate.png" alt=""> -->
+      <img src="./assets/img/certificate.jpg" alt="">
+    </div>
+  </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <section id="comments">
+    <h2>Rəylər</h2>
+    <div id="slider">
+      <div id="last-clone" class="slide before-active">
+        <div class="person">
+          <p>Leyla Hüseynova</p>
+        </div>
+        <div class="comment">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias sequi dicta commodi
+            excepturi nam repudiandae possimus facilis id, quia accusamus eum asperiores labore cumque
+            tenetur tempore, blanditiis architecto nobis dignissimos earum quisquam ea laboriosam quidem?
+            Dolorem odit maiores vitae.</p>
+        </div>
+      </div>
+      <div class="slide active">
+        <div class="person">
+          <p>Yagmur Novruzlu</p>
+        </div>
+        <div class="comment">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet animi pariatur? Illum
+            aspernatur provident quaerat quo explicabo illo maiores suscipit tenetur, inventore soluta harum
+            exercitationem, praesentium laudantium perferendis veniam dolores beatae officia in quod facilis
+            obcaecati! Cupiditate, facilis iusto!</p>
+        </div>
+      </div>
+      <div class="slide after-active">
+        <div class="person">
+          <p>Heydər Xammədov</p>
+        </div>
+        <div class="comment">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut id dicta esse, vel molestiae eum
+            minima libero dolorum sequi accusantium nostrum porro quasi adipisci praesentium sint a sed
+            provident voluptas eos natus, iure facere quis autem voluptatem. Fugiat, accusamus numquam.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="person">
+          <p>Lamiə Yusifli</p>
+        </div>
+        <div class="comment">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque, soluta iste sequi omnis
+            cum temporibus ipsa dolorem aspernatur nemo, ea in, quia vel asperiores voluptas perferendis
+            voluptatem officiis consequatur adipisci rem est veritatis. Nam facilis fugiat sunt porro
+            doloribus!</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="person">
+          <p>Yusif Fərəcli</p>
+        </div>
+        <div class="comment">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, deleniti impedit. At, quos. Eligendi
+            optio sint praesentium numquam, facilis voluptates enim eius accusantium laudantium at neque!
+            Eos quidem cum quae sapiente voluptatibus perferendis quasi facilis pariatur, placeat aliquam,
+            natus ipsam.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="person">
+          <p>Leyla Hüseynova</p>
+        </div>
+        <div class="comment">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias sequi dicta commodi
+            excepturi nam repudiandae possimus facilis id, quia accusamus eum asperiores labore cumque
+            tenetur tempore, blanditiis architecto nobis dignissimos earum quisquam ea laboriosam quidem?
+            Dolorem odit maiores vitae.</p>
+        </div>
+      </div>
+      <div id="first-clone" class="slide">
+        <div class="person">
+          <p>Yagmur Novruzlu</p>
+        </div>
+        <div class="comment">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet animi pariatur? Illum
+            aspernatur provident quaerat quo explicabo illo maiores suscipit tenetur, inventore soluta harum
+            exercitationem, praesentium laudantium perferendis veniam dolores beatae officia in quod facilis
+            obcaecati! Cupiditate, facilis iusto!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="navigator">
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
+    </div>
+  </section>
+
+  <script>
+    const count = $(".slide").length;
+    function ChangeActive() {
+      var activeIndex = $(".slide.active").index(".slide");
+
+      $(".slide").eq(activeIndex).removeClass("active").addClass("before-active");
+      $(".slide").eq(activeIndex - 1).removeClass("before-active");
+
+      activeIndex++;
+      if (activeIndex === count - 1) {
+        activeIndex = 1;
+        $(".slide").removeClass("before-active");
+        $(".slide").removeClass("after-active");
+        $(".slide").eq(activeIndex - 1).addClass("before-active");
+        $(".slide").eq(activeIndex).addClass("after-active");
+      }
+
+      $(".slide").eq(activeIndex).removeClass("after-active").addClass("active");
+      $(".slide").eq(activeIndex + 1).addClass("after-active");
+    }
+
+    var loopInterval = setInterval(ChangeActive, 2000);
+
+    $(".after-active").click(function () {
+      var afterIndex = $(this).index(".slide");
+      $(".slide").eq(afterIndex).removeClass("after-active").addClass("active");
+      $(".slide").eq(afterIndex - 1).removeClass("active").addClass("before-active");
+      $(".slide").eq(afterIndex + 1).addClass("after-active");
+    });
+  </script>
+
+  <script>
+    $(".links li").click(function () {
+      var target = $(this).attr("data-link");
+      $('html, body').animate({
+        scrollTop: $(target).offset().top - 60
+      }, 600);
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.stat p.value').each(function () {
+        var $this = $(this);
+        var countTo = $this.attr('data-count');
+
+        $({ countNum: $this.text() }).animate({
+          countNum: countTo
+        },
+          {
+            duration: 2000, // Change duration as needed
+            easing: 'linear',
+            step: function () {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              $this.text(this.countNum);
+            }
+          });
       });
-    </script>
-  </body>
+    });
+  </script>
+
+  <script src="./assets/js/Scroll.js"></script>
+</body>
+
 </html>
