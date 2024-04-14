@@ -1,0 +1,69 @@
+@mixin active-sides {
+  display: block !important;
+  opacity: 0.5;
+  display: none;
+  width: 400px;
+  height: 160px;
+  margin: auto 0;
+  cursor: pointer;
+  .comment {
+    p {
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+#comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $section-padding;
+  h2 {
+    margin: 50px 0;
+  }
+  #slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    overflow: none;
+    height: 250px;
+    .slide {
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #ccc;
+      display: none;
+      transition: all 0.5s ease;
+      position: absolute;
+      opacity: 0;
+      .person {
+        p {
+          font-weight: 500;
+        }
+      }
+      &.active {
+        width: 600px;
+        height: 250px;
+        display: block !important;
+        margin: 0 20px;
+        margin-bottom: 20px;
+        opacity: 1;
+        background-color: $dutch-white;
+      }
+      &.before-active {
+        transform: translateX(-150%);
+        @include active-sides();
+      }
+      &.after-active {
+        transform: translateX(150%);
+        @include active-sides();
+      }
+    }
+  }
+}

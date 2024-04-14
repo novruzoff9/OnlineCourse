@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 0 200px;
+  padding: 20px 200px;
 }
 #home .logo-slogan {
   display: grid;
@@ -196,12 +196,11 @@
 }
 
 #advantages {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 200px;
+  padding: 20px 200px;
 }
 #advantages h2 {
   margin: 50px 0;
@@ -242,4 +241,79 @@
 .show {
   opacity: 1 !important;
   transform: translateX(0) !important;
+}
+
+#comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 200px;
+}
+#comments h2 {
+  margin: 50px 0;
+}
+#comments #slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: none;
+  height: 250px;
+}
+#comments #slider .slide {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ccc;
+  display: none;
+  transition: all 0.5s ease;
+  position: absolute;
+  opacity: 0;
+}
+#comments #slider .slide .person p {
+  font-weight: 500;
+}
+#comments #slider .slide.active {
+  width: 600px;
+  height: 250px;
+  display: block !important;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+  background-color: #c5cbe3;
+}
+#comments #slider .slide.before-active {
+  transform: translateX(-150%);
+  display: block !important;
+  opacity: 0.5;
+  display: none;
+  width: 400px;
+  height: 160px;
+  margin: auto 0;
+  cursor: pointer;
+}
+#comments #slider .slide.before-active .comment p {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#comments #slider .slide.after-active {
+  transform: translateX(150%);
+  display: block !important;
+  opacity: 0.5;
+  display: none;
+  width: 400px;
+  height: 160px;
+  margin: auto 0;
+  cursor: pointer;
+}
+#comments #slider .slide.after-active .comment p {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }/*# sourceMappingURL=home.css.map */

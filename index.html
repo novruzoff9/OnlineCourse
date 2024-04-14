@@ -108,6 +108,123 @@
         </div>
     </section>
 
+    <section id="comments">
+        <h2>Rəylər</h2>
+        <div id="slider">
+            <div id="last-clone" class="slide before-active">
+                <div class="person">
+                    <p>Leyla Hüseynova</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias sequi dicta commodi
+                        excepturi nam repudiandae possimus facilis id, quia accusamus eum asperiores labore cumque
+                        tenetur tempore, blanditiis architecto nobis dignissimos earum quisquam ea laboriosam quidem?
+                        Dolorem odit maiores vitae.</p>
+                </div>
+            </div>
+            <div class="slide active">
+                <div class="person">
+                    <p>Yagmur Novruzlu</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet animi pariatur? Illum
+                        aspernatur provident quaerat quo explicabo illo maiores suscipit tenetur, inventore soluta harum
+                        exercitationem, praesentium laudantium perferendis veniam dolores beatae officia in quod facilis
+                        obcaecati! Cupiditate, facilis iusto!</p>
+                </div>
+            </div>
+            <div class="slide after-active">
+                <div class="person">
+                    <p>Heydər Xammədov</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut id dicta esse, vel molestiae eum
+                        minima libero dolorum sequi accusantium nostrum porro quasi adipisci praesentium sint a sed
+                        provident voluptas eos natus, iure facere quis autem voluptatem. Fugiat, accusamus numquam.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="person">
+                    <p>Lamiə Yusifli</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque, soluta iste sequi omnis
+                        cum temporibus ipsa dolorem aspernatur nemo, ea in, quia vel asperiores voluptas perferendis
+                        voluptatem officiis consequatur adipisci rem est veritatis. Nam facilis fugiat sunt porro
+                        doloribus!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="person">
+                    <p>Yusif Fərəcli</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, deleniti impedit. At, quos. Eligendi
+                        optio sint praesentium numquam, facilis voluptates enim eius accusantium laudantium at neque!
+                        Eos quidem cum quae sapiente voluptatibus perferendis quasi facilis pariatur, placeat aliquam,
+                        natus ipsam.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="person">
+                    <p>Leyla Hüseynova</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias sequi dicta commodi
+                        excepturi nam repudiandae possimus facilis id, quia accusamus eum asperiores labore cumque
+                        tenetur tempore, blanditiis architecto nobis dignissimos earum quisquam ea laboriosam quidem?
+                        Dolorem odit maiores vitae.</p>
+                </div>
+            </div>
+            <div id="first-clone" class="slide">
+                <div class="person">
+                    <p>Yagmur Novruzlu</p>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet animi pariatur? Illum
+                        aspernatur provident quaerat quo explicabo illo maiores suscipit tenetur, inventore soluta harum
+                        exercitationem, praesentium laudantium perferendis veniam dolores beatae officia in quod facilis
+                        obcaecati! Cupiditate, facilis iusto!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="navigator">
+            
+        </div>
+    </section>
+
+    <script>
+        const count = $(".slide").length;
+        function ChangeActive() {
+            var activeIndex = $(".slide.active").index(".slide");
+
+            $(".slide").eq(activeIndex).removeClass("active").addClass("before-active");
+            $(".slide").eq(activeIndex - 1).removeClass("before-active");
+
+            activeIndex++;
+            if (activeIndex === count - 1) {
+                activeIndex = 1;
+                $(".slide").removeClass("before-active");
+                $(".slide").removeClass("after-active");
+                $(".slide").eq(activeIndex - 1).addClass("before-active");
+                $(".slide").eq(activeIndex).addClass("after-active");
+            }
+
+            $(".slide").eq(activeIndex).removeClass("after-active").addClass("active");
+            $(".slide").eq(activeIndex + 1).addClass("after-active");
+        }
+
+        var loopInterval = setInterval(ChangeActive, 2000);
+
+        $(".after-active").click(function () {
+            var afterIndex = $(this).index(".slide");
+            $(".slide").eq(afterIndex).removeClass("after-active").addClass("active");
+            $(".slide").eq(afterIndex - 1).removeClass("active").addClass("before-active");
+            $(".slide").eq(afterIndex + 1).addClass("after-active");
+        });
+    </script>
+
     <script>
         $(".links li").click(function () {
             var target = $(this).attr("data-link");
@@ -136,27 +253,10 @@
                         }
                     });
             });
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('header').addClass('scrolled');
-                } else {
-                    $('header').removeClass('scrolled');
-                }
-                var windowHeight = $(window).height();
-                var scrollDistance = $(window).scrollTop();
-
-                $('.advantage').each(function () {
-                    var elementTop = $(this).offset().top;
-
-                    if (scrollDistance + windowHeight - 300 >= elementTop) {
-                        $(this).addClass('show');
-                    } else {
-                        $(this).removeClass('show');
-                    }
-                });
-            });
         });
     </script>
+
+    <script src="./assets/js/Scroll.js"></script>
 </body>
 
 </html>
