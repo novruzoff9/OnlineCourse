@@ -1,76 +1,114 @@
-#navbar {
-  width: 100%;
-  padding: 40px 200px;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 5;
-  .logo {
-    width: 100px;
-    img {
-      width: 100%;
-    }
-  }
-  .links {
+@media only screen and (min-width: 600px){
+  #navbar {
+    width: 100%;
+    padding: 40px 200px;
+    height: 60px;
     display: flex;
     flex-direction: row;
-    list-style: none;
-    width: 600px;
-    justify-content: space-between;
     align-items: center;
-    margin: 0;
-    li {
-      cursor: pointer;
-      font-weight: 500;
-      color: $dark-blue;
-      transition: 0.4s ease;
-      font-size: 18px;
-      position: relative;
-      &::after {
-        display: block;
-        content: "";
-        height: 2px;
-        width: 0px;
-        background-color: $light-blue;
-        transition: width .3s ease;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    .logo {
+      width: 100px;
+      img {
+        width: 100%;
       }
-      &:hover {
-        color: $light-blue;
-        &::after{
-          width: 100%;
+    }
+    .links {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      width: 600px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      li {
+        cursor: pointer;
+        font-weight: 500;
+        color: $dark-blue;
+        transition: 0.4s ease;
+        font-size: 18px;
+        position: relative;
+        &::after {
+          display: block;
+          content: "";
+          height: 2px;
+          width: 0px;
+          background-color: $light-blue;
+          transition: width .3s ease;
+        }
+        &:hover {
+          color: $light-blue;
+          &::after{
+            width: 100%;
+          }
         }
       }
     }
+    .login {
+      @include flex-center;
+      a {
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .sign-btn {
+        color: $light-blue;
+        padding: 6px 16px;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+      .reg-btn {
+        //background-color: $dark-purple;
+        background-color: $light-blue;
+        padding: 6px 16px;
+        border-radius: 8px;
+        font-size: 18px;
+        color: white;
+      }
+    }
+    i.fas.fa-bars{
+      display: none;
+    }
   }
-  .login {
-    @include flex-center;
-    a {
-      text-decoration: none;
-      font-weight: 500;
+}
+
+@media only screen and (max-width: 600px){
+  #navbar {
+    width: 100%;
+    padding: $mobile-section-padding;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    .logo {
+      width: 100px;
+      img {
+        width: 100%;
+      }
     }
-    .sign-btn {
-      color: $light-blue;
-      padding: 6px 16px;
-      border-radius: 8px;
-      font-size: 18px;
+    .links {
+      display: none;
     }
-    .reg-btn {
-      //background-color: $dark-purple;
-      background-color: $light-blue;
-      padding: 6px 16px;
-      border-radius: 8px;
-      font-size: 18px;
-      color: white;
+    .login {
+      display: none;
+    }
+    i.fas.fa-bars{
+      display: block;
+      color: $dark-blue;
+      font-size: 24px;
+      cursor: pointer;
     }
   }
 }
 
 .scrolled {
-  padding: 20px 200px !important;
+  padding: 20px !important;
   background-color: white;
   box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.75);
 }

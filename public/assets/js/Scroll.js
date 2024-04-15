@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
+$(function() {
+    $(window).on('scroll', function() {
         //Header Scroll
         if ($(this).scrollTop() > 50) {
             $('header').addClass('scrolled');
@@ -9,9 +9,9 @@ $(document).ready(function () {
         var windowHeight = $(window).height();
         var scrollDistance = $(window).scrollTop();
 
-        
-        $('.advantage').each(function () {
+        $('.advantage').each(function() {
             var elementTop = $(this).offset().top;
+            console.log(elementTop);
 
             if (scrollDistance + windowHeight - 300 >= elementTop) {
                 $(this).addClass('show');

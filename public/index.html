@@ -37,8 +37,20 @@
       <a href="#" class="sign-btn">Daxil ol</a>
       <a href="#" class="reg-btn">Qeydiyyat</a>
     </div>
-    <i class="fas fa-bars"></i>
+    <i id="mobile-menubtn" class="fas fa-bars"></i>
   </header>
+  <aside id="mobile-navbar">
+    <ul class="links">
+      <li data-link="#advantages">Üstünlüklər</li>
+      <li data-link="#comments">Rəylər</li>
+      <li data-link="#content">Kontent</li>
+      <li data-link="#contact">Əlaqə</li>
+    </ul>
+    <div class="login">
+      <a href="#" class="sign-btn">Daxil ol</a>
+      <a href="#" class="reg-btn">Qeydiyyat</a>
+    </div>
+  </aside>
   <section id="home">
     <div class="logo-slogan">
       <div class="welcome">
@@ -254,6 +266,10 @@
       $('html, body').animate({
         scrollTop: $(target).offset().top - 60
       }, 600);
+    });
+
+    $("#mobile-menubtn").click(function(){
+      $("#mobile-navbar").toggleClass("show")
     });
   </script>
   <script>
