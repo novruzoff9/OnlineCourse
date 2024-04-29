@@ -17,7 +17,7 @@
   }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
   #comments {
     width: 100%;
     display: flex;
@@ -70,7 +70,7 @@
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   #comments {
     width: 100%;
     display: flex;
@@ -109,8 +109,8 @@
           margin-bottom: 20px;
           opacity: 1;
           background-color: $dutch-white;
-          .comment{
-            p{
+          .comment {
+            p {
               margin: 0;
             }
           }

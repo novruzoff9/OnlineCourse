@@ -24,65 +24,117 @@
 
 @media only screen and (min-width: 600px) {
   #home {
-    background: rgb(234, 251, 245);
-    background: linear-gradient(135deg, rgb(234, 251, 245) 0%, rgb(225, 220, 240) 100%);
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 20px 200px;
+    padding: 100px 200px;
   }
-  #home .logo-slogan {
-    display: grid;
-    grid-template-columns: 1.25fr 1.75fr;
+  #home #welcome {
+    background-color: #f2f2f2;
     height: 85vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 20px 60px;
+    border-radius: 50px;
   }
-  #home .logo-slogan .welcome {
-    width: 550px;
+  #home #welcome #slogan-sign {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
-  #home .logo-slogan .welcome .slogan {
-    display: flex;
-    flex-direction: column;
-  }
-  #home .logo-slogan .welcome .slogan h1 {
+  #home #welcome #slogan-sign p {
+    width: 589px;
     font-size: 60px;
-    color: #3065f5;
+    font-weight: 700;
+    line-height: 90px;
+    text-align: left;
   }
-  #home .logo-slogan .welcome .slogan p {
-    color: #4E5D78;
-    margin: 15px 0;
+  #home #welcome #slogan-sign p span {
+    color: #09B451;
   }
-  #home .logo-slogan .welcome span {
-    position: relative;
-    color: #7608fa;
-  }
-  #home .logo-slogan .welcome span::before {
-    content: "";
-    background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-2.png);
-    width: 160px;
-    height: 31px;
-    position: absolute;
-    background-size: 162px;
-    top: 56px;
-    left: 69px;
-  }
-  #home .logo-slogan .welcome span::after {
-    content: "";
-    background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-1.png);
-    width: 35px;
-    height: 36px;
-    position: absolute;
-    background-size: 35px;
-    top: 8px;
-  }
-  #home .logo-slogan .img {
-    width: 100%;
+  #home #welcome #slogan-sign a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 190px;
+    height: 60px;
+    padding: 14px 28px;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: #09B451;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  #home #welcome #image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #home #welcome #image img {
+    width: 80%;
+    border-radius: 25px;
+  }
+  #home #welcome #image #student-count {
+    position: absolute;
+    right: 30px;
+    bottom: 150px;
+    background-color: #fff;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  #home #welcome #image #student-count i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #09B451;
+    background-color: #E1FFEE;
+  }
+  #home #welcome #image #student-count p.count {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    color: #09B451;
+    margin: 0;
+  }
+  #home #welcome #image #student-count p.student {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    margin: 0;
+  }
+  #home #welcome #image #teachers {
+    position: absolute;
+    left: 0;
+    bottom: 250px;
+    background-color: #fff;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 180px;
+  }
+  #home #welcome #image #teachers p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+  }
+  #home #welcome #image #teachers p span {
+    color: #09B451;
   }
   #home #counts {
     display: flex;
@@ -90,6 +142,7 @@
     width: 100%;
     justify-content: center;
     padding: 0 100px;
+    margin-top: 30px;
   }
   #home #counts .stat {
     display: flex;
@@ -97,26 +150,27 @@
     justify-content: center;
     align-items: center;
     margin: 0 20px;
-    border: 2px solid #4E5D78;
     flex: 1;
     padding: 8px 12px;
     border-radius: 8px;
+    background-color: #DDFFFF;
   }
   #home #counts .stat i {
-    font-size: 52px;
-    color: #4056a1;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #09B451;
+    font-size: 20px;
+    background-color: #09B451;
+    color: white;
   }
-  #home #counts .stat p.value {
-    font-weight: 500;
-    font-size: 38px;
+  #home #counts .stat p {
+    font-size: 20px;
     margin: 0;
-    color: #4056a1;
-  }
-  #home #counts .stat p.data {
-    font-size: 24px;
-    margin: 0;
-    color: #4056a1;
+    margin-left: 10px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -150,7 +204,7 @@
   }
   #home .logo-slogan .welcome .slogan h1 {
     font-size: 34px;
-    color: #3065f5;
+    color: #DDFFFF;
   }
   #home .logo-slogan .welcome .slogan p {
     color: #4E5D78;
@@ -255,11 +309,11 @@
     content: "";
     height: 2px;
     width: 0px;
-    background-color: #3065f5;
+    background-color: #09B451;
     transition: width 0.3s ease;
   }
   #navbar .links li:hover {
-    color: #3065f5;
+    color: #09B451;
   }
   #navbar .links li:hover::after {
     width: 100%;
@@ -274,13 +328,13 @@
     font-weight: 500;
   }
   #navbar .login .sign-btn {
-    color: #3065f5;
+    color: #09B451;
     padding: 6px 16px;
     border-radius: 8px;
     font-size: 18px;
   }
   #navbar .login .reg-btn {
-    background-color: #3065f5;
+    background-color: #09B451;
     padding: 6px 16px;
     border-radius: 8px;
     font-size: 18px;
@@ -323,7 +377,7 @@
   }
 }
 .scrolled {
-  padding: 20px !important;
+  padding: 20px 200px !important;
   background-color: white;
   box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.75);
 }
@@ -367,11 +421,11 @@
     content: "";
     height: 2px;
     width: 0px;
-    background-color: #3065f5;
+    background-color: #DDFFFF;
     transition: width 0.3s ease;
   }
   #mobile-navbar .links li:hover {
-    color: #3065f5;
+    color: #DDFFFF;
   }
   #mobile-navbar .links li:hover::after {
     width: 100%;
@@ -388,13 +442,13 @@
     font-weight: 500;
   }
   #mobile-navbar .login .sign-btn {
-    color: #3065f5;
+    color: #DDFFFF;
     padding: 6px 16px;
     border-radius: 8px;
     font-size: 18px;
   }
   #mobile-navbar .login .reg-btn {
-    background-color: #3065f5;
+    background-color: #DDFFFF;
     padding: 6px 16px;
     border-radius: 8px;
     font-size: 18px;

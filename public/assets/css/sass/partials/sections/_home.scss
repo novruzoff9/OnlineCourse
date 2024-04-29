@@ -1,103 +1,149 @@
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
   #home {
-    //background-color: $vermillion;
-    background: rgb(234, 251, 245);
-    background: linear-gradient(
-      135deg,
-      rgba(234, 251, 245, 1) 0%,
-      rgba(225, 220, 240, 1) 100%
-    );
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: $section-padding;
-    .logo-slogan {
-      display: grid;
-      grid-template-columns: 1.25fr 1.75fr;
+    padding: 100px 200px;
+    #welcome {
+      background-color: #f2f2f2;
       height: 85vh;
-      .welcome {
-        width: 550px;
-        @include flex-center;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      padding: 20px 60px;
+      border-radius: 50px;
+      #slogan-sign {
+        display: flex;
+        justify-content: center;
         flex-direction: column;
-        .slogan {
+        p {
+          width: 589px;
+          font-size: 60px;
+          font-weight: 700;
+          line-height: 90px;
+          text-align: left;
+          span {
+            color: $green;
+          }
+        }
+        a {
+          @include flex-center;
+          width: 190px;
+          height: 60px;
+          padding: 14px 28px;
+          gap: 10px;
+          border-radius: 5px;
+          background-color: $green;
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          text-decoration: none;
+        }
+      }
+      #image {
+        @include flex-center;
+        position: relative;
+        img {
+          width: 80%;
+          border-radius: 25px;
+        }
+        #student-count {
+          position: absolute;
+          right: 30px;
+          bottom: 150px;
+          background-color: #fff;
+          border-radius: 6px;
           display: flex;
           flex-direction: column;
-          h1 {
-            font-size: 60px;
-            color: $light-blue;
+          align-items: center;
+          padding: 15px;
+          i {
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: $green;
+            background-color: $light-green;
           }
+          p.count {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            text-align: left;
+            color: $green;
+            margin: 0;
+          }
+          p.student {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: center;
+            margin: 0;
+          }
+        }
+        #teachers {
+          position: absolute;
+          left: 0;
+          bottom: 250px;
+          background-color: #fff;
+          border-radius: 6px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 15px;
+          width: 180px;
           p {
-            color: $dark-grey;
-            margin: 15px 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            margin: 0;
+            span {
+              color: $green;
+            }
           }
         }
-        span {
-          position: relative;
-          color: $dark-purple;
-          &::before {
-            content: "";
-            background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-2.png);
-            width: 160px;
-            height: 31px;
-            position: absolute;
-            background-size: 162px;
-            top: 56px;
-            left: 69px;
-          }
-          &::after {
-            content: "";
-            background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-1.png);
-            width: 35px;
-            height: 36px;
-            position: absolute;
-            background-size: 35px;
-            top: 8px;
-          }
-        }
-      }
-      .img {
-        width: 100%;
-        @include flex-center;
       }
     }
+
     #counts {
       display: flex;
       flex-direction: row;
       width: 100%;
       justify-content: center;
       padding: 0 100px;
+      margin-top: 30px;
       .stat {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin: 0 20px;
-        border: 2px solid $dark-grey;
         flex: 1;
         padding: 8px 12px;
         border-radius: 8px;
-        i{
-          font-size: 52px;
-          color: $dark-blue;
-          margin-right: 20px;
+        background-color: $light-blue;
+        i {
+          @include flex-center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          color: $green;
+          font-size: 20px;
+          background-color: $green;
+          color: white;
         }
-        p.value {
-          font-weight: 500;
-          font-size: 38px;
+        p{
+          font-size: 20px;
           margin: 0;
-          color: $dark-blue;
-        }
-        p.data {
-          font-size: 24px;
-          margin: 0;
-          color: $dark-blue;
+          margin-left: 10px;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   #home {
     background: rgb(234, 251, 245);
     background: linear-gradient(
@@ -133,7 +179,7 @@
           position: relative;
           color: $dark-purple;
           &::before {
-            content: "";
+            content: '';
             background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-2.png);
             width: 160px;
             height: 31px;
@@ -143,7 +189,7 @@
             left: 69px;
           }
           &::after {
-            content: "";
+            content: '';
             background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-1.png);
             width: 35px;
             height: 36px;
@@ -168,12 +214,12 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        
+
         border: 2px solid $dark-grey;
         flex: 1;
         padding: 8px 12px;
         border-radius: 8px;
-        i{
+        i {
           display: none;
         }
         p.value {
