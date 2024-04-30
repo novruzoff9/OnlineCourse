@@ -1,0 +1,56 @@
+@media only screen and (min-width: 600px) {
+  #lessons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $section-padding;
+    h2 {
+      margin: 50px 0;
+    }
+    .lesson-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px;
+      width: 100%;
+      .lesson {
+        padding: 12px;
+        border-radius: 20px;
+        background-color: #fff;
+        @include box-shadow();
+        cursor: pointer;
+        transition: all .4s ease;
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+        .details {
+          p.title {
+            margin: 10px 0;
+            font-weight: 500;
+            font-size: 18px;
+          }
+          p.teacher {
+            font-size: 16px;
+          }
+          .rating {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+            p {
+              margin: 0;
+              margin-left: 6px;
+            }
+            i {
+              color: #b4690e;
+            }
+          }
+        }
+        &:hover{
+            transform: scale(106%);
+        }
+      }
+    }
+  }
+}

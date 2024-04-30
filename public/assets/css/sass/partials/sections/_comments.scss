@@ -23,57 +23,6 @@
     h2 {
       margin: 50px 0;
     }
-    #slider {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      position: relative;
-      overflow: none;
-      height: 250px;
-      .slide {
-        padding: 20px;
-        border-radius: 20px;
-        background-color: #ccc;
-        display: none;
-        transition: all 0.5s ease;
-        position: absolute;
-        opacity: 0;
-        .person {
-          p {
-            font-weight: 500;
-          }
-        }
-        &.active {
-          width: 600px;
-          height: fit-content;
-          display: block !important;
-          margin: 0 20px;
-          margin-bottom: 20px;
-          opacity: 1;
-          background-color: $dutch-white;
-        }
-        &.before-active {
-          transform: translateX(-150%);
-          @include active-sides();
-        }
-        &.after-active {
-          transform: translateX(150%);
-          @include active-sides();
-        }
-      }
-    }
-  }
-
-  #comments2 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: $section-padding;
-    h2 {
-      margin: 50px 0;
-    }
     .slogan-slider {
       display: grid;
       grid-template-columns: 2fr 4.5fr;
