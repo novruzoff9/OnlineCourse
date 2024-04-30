@@ -11,7 +11,6 @@ $(function() {
 
         $('.advantage').each(function() {
             var elementTop = $(this).offset().top;
-            console.log(elementTop);
 
             if (scrollDistance + windowHeight - 300 >= elementTop) {
                 $(this).addClass('show');

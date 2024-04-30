@@ -247,8 +247,8 @@
         <div class="slogan">
           <p>Tələbələrimiz <br /><span>Nə Deyir?</span></p>
           <div class="navigation">
-            <i class="fas fa-chevron-left"></i>
-            <i class="fas fa-chevron-right"></i>
+            <i id="prevcomment" class="fas fa-chevron-left"></i>
+            <i id="nextcomment" class="fas fa-chevron-right"></i>
           </div>
         </div>
         <div class="slider">
@@ -275,6 +275,17 @@
             </p>
           </div>
           <div class="comment slide after-active">
+            <p class="writer">Alsu Məmmədova</p>
+            <p class="text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Similique magni dolore odit ea reprehenderit consequuntur.
+              Similique atque, nesciunt nulla repellat maxime, labore fugiat
+              aspernatur enim, esse maiores cupiditate necessitatibus accusamus
+              ullam quibusdam dicta quae et pariatur? Harum commodi sint
+              temporibus!
+            </p>
+          </div>
+          <div class="comment slide">
             <p class="writer">Yusif Fərəcli</p>
             <p class="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
@@ -286,17 +297,6 @@
           </div>
           <div class="comment slide">
             <p class="writer">Leyla Hüseynova</p>
-            <p class="text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Similique magni dolore odit ea reprehenderit consequuntur.
-              Similique atque, nesciunt nulla repellat maxime, labore fugiat
-              aspernatur enim, esse maiores cupiditate necessitatibus accusamus
-              ullam quibusdam dicta quae et pariatur? Harum commodi sint
-              temporibus!
-            </p>
-          </div>
-          <div class="comment slide">
-            <p class="writer">Alsu Məmmədova</p>
             <p class="text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Similique magni dolore odit ea reprehenderit consequuntur.
@@ -372,10 +372,14 @@
           .addClass('after-active');
       }
 
-      var loopInterval = setInterval(ChangeActive, 2000);
+      var loopInterval = setInterval(ChangeActive, 3000);
 
-      $('.after-active').click(function () {
-        var afterIndex = $(this).index('.slide');
+      $('#nextcomment').click(function () {
+        var afterIndex = $('.slide.active').index('.slide') + 1;
+        if(afterIndex === count) {afterIndex = 0;}
+        $('.slide')
+          .eq(afterIndex - 2)
+          .removeClass('before-active');
         $('.slide')
           .eq(afterIndex)
           .removeClass('after-active')
@@ -387,6 +391,35 @@
         $('.slide')
           .eq(afterIndex + 1)
           .addClass('after-active');
+          if(afterIndex === count - 1){
+            $('.slide')
+            .eq(0)
+            .addClass('after-active');
+          }
+      });
+
+      $('#prevcomment').click(function () {
+        var prevIndex = $('.slide.active').index('.slide') - 1;
+        //if(afterIndex === -1) {afterIndex = 0;}
+        $('.slide')
+          .eq(prevIndex)
+          .removeClass('before-active')
+          .addClass('active');
+        $('.slide')
+          .eq(prevIndex - 1)
+          .addClass('before-active');
+        $('.slide')
+          .eq(prevIndex + 1)
+          .removeClass('active')
+          .addClass('after-active');
+        $('.slide')
+          .eq(prevIndex + 2)
+          .removeClass('after-active');
+          // if(prevIndex === count - 1){
+          //   $('.slide')
+          //   .eq(0)
+          //   .addClass('after-active');
+          // }
       });
     </script>
 

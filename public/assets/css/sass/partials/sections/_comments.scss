@@ -114,6 +114,7 @@
           transition: all 0.5s ease;
           opacity: 0;
           position: absolute;
+          transform: translateX(210%);
           p.writer {
             color: $green;
             font-weight: 500;
@@ -123,6 +124,7 @@
           &.active {
             height: fit-content;
             opacity: 1;
+            transform: translateX(0);
           }
           &.before-active {
             transform: translateX(-100%);

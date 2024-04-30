@@ -503,6 +503,7 @@
     align-items: center;
     padding: 15px;
     width: 150px;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.75);
   }
   #advantages .advantage .image #certificate i {
     display: flex;
@@ -729,6 +730,7 @@
     transition: all 0.5s ease;
     opacity: 0;
     position: absolute;
+    transform: translateX(210%);
   }
   #comments2 .slogan-slider .slider .comment p.writer {
     color: #09B451;
@@ -740,6 +742,7 @@
     height: -moz-fit-content;
     height: fit-content;
     opacity: 1;
+    transform: translateX(0);
   }
   #comments2 .slogan-slider .slider .comment.before-active {
     transform: translateX(-100%);
