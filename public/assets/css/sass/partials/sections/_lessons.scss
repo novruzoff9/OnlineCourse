@@ -10,8 +10,8 @@
     }
     .lesson-list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      column-gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px;
       width: 100%;
       .lesson {
         padding: 12px;
@@ -20,9 +20,13 @@
         @include box-shadow();
         cursor: pointer;
         transition: all .4s ease;
+        text-decoration: none;
         img {
           width: 100%;
           border-radius: 8px;
+        }
+        p{
+          color: #030303;
         }
         .details {
           p.title {
@@ -32,12 +36,13 @@
           }
           p.teacher {
             font-size: 16px;
+            margin-bottom: 6px;
           }
           .rating {
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             p {
               margin: 0;
               margin-left: 6px;

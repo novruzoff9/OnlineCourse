@@ -168,7 +168,7 @@
     color: white;
   }
   #home #counts .stat p {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     margin-left: 10px;
   }
@@ -281,9 +281,8 @@
   }
   #lessons .lesson-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
     width: 100%;
   }
   #lessons .lesson-list .lesson {
@@ -295,10 +294,14 @@
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.4s ease;
+    text-decoration: none;
   }
   #lessons .lesson-list .lesson img {
     width: 100%;
     border-radius: 8px;
+  }
+  #lessons .lesson-list .lesson p {
+    color: #030303;
   }
   #lessons .lesson-list .lesson .details p.title {
     margin: 10px 0;
@@ -307,12 +310,13 @@
   }
   #lessons .lesson-list .lesson .details p.teacher {
     font-size: 16px;
+    margin-bottom: 6px;
   }
   #lessons .lesson-list .lesson .details .rating {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
   #lessons .lesson-list .lesson .details .rating p {
     margin: 0;
@@ -354,12 +358,18 @@
     margin: 0;
   }
   #navbar .links li {
+    text-decoration: none;
     cursor: pointer;
     font-weight: 500;
     color: #4056a1;
     transition: 0.4s ease;
     font-size: 18px;
     position: relative;
+  }
+  #navbar .links li a {
+    display: block;
+    text-decoration: none;
+    height: 100%;
   }
   #navbar .links li::after {
     display: block;
@@ -369,7 +379,7 @@
     background-color: #09b451;
     transition: width 0.3s ease;
   }
-  #navbar .links li:hover {
+  #navbar .links li:hover a {
     color: #09b451;
   }
   #navbar .links li:hover::after {
