@@ -22,100 +22,6 @@
 }
 
 @media only screen and (min-width: 600px) {
-  #search-course {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 200px;
-    margin-top: 120px;
-  }
-  #search-course h4 {
-    font-weight: 400;
-    font-size: 20px;
-  }
-  #search-course form {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 10px;
-  }
-  #search-course form input[type=text] {
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    outline: none;
-    border-radius: 8px;
-  }
-  #search-course form input[type=submit] {
-    background-color: #09b451;
-    padding: 6px 12px;
-    border-radius: 8px;
-    color: #fff;
-    border: none;
-    outline: none;
-  }
-}
-@media only screen and (min-width: 600px) {
-  #lessons {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 200px;
-  }
-  #lessons h2 {
-    margin: 50px 0;
-  }
-  #lessons .lesson-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-  #lessons .lesson-list .lesson {
-    padding: 12px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 0.4s ease;
-    text-decoration: none;
-  }
-  #lessons .lesson-list .lesson img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  #lessons .lesson-list .lesson p {
-    color: #030303;
-  }
-  #lessons .lesson-list .lesson .details p.title {
-    margin: 10px 0;
-    font-weight: 500;
-    font-size: 18px;
-  }
-  #lessons .lesson-list .lesson .details p.teacher {
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-  #lessons .lesson-list .lesson .details .rating {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 6px;
-  }
-  #lessons .lesson-list .lesson .details .rating p {
-    margin: 0;
-    margin-left: 6px;
-  }
-  #lessons .lesson-list .lesson .details .rating i {
-    color: #b4690e;
-  }
-  #lessons .lesson-list .lesson:hover {
-    transform: scale(106%);
-  }
-}
-@media only screen and (min-width: 600px) {
   #navbar {
     width: 100%;
     padding: 40px 200px;
@@ -316,32 +222,78 @@
     display: none;
   }
 }
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eee !important;
+}
+
 @media only screen and (min-width: 600px) {
-  #pagedlist {
+  .logo {
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 80px;
+  }
+  .logo img {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 200px;
   }
-  #pagedlist p, #pagedlist i {
-    margin: 0;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 6px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  #pagedlist p:hover {
-    background-color: #ccc;
-  }
-  #pagedlist i, #pagedlist p.active {
+  .circle {
+    width: 30vw;
+    border-radius: 50%;
     background-color: #09b451;
-    color: white;
+    position: absolute;
   }
-}/*# sourceMappingURL=courses.css.map */
+  #right-top {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  #left-bottom {
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+  h2 {
+    margin: 20px 0 !important;
+    color: #030303;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    width: 500px;
+  }
+  form input:not(input[type=button]) {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  form input[type=submit] {
+    background-color: #09b451;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: 500;
+  }
+  form p {
+    margin: 16px 0;
+    text-align: center;
+  }
+  form p a {
+    font-weight: 500;
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=logins.css.map */

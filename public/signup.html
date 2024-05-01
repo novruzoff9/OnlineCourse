@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sertifikatlı Alman dili hazırlığı" />
+    <title>Alman dili</title>
+    <link rel="icon" type="image/png" href="public/assets/img/Flag.png" />
+    <link rel="stylesheet" href="./assets/css/sass/logins.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="circle" id="right-top"></div>
+    <div class="circle" id="left-bottom"></div>
+
+    <a class="logo" href="./index.html">
+      <img src="./assets/img/Flag.png" alt="" />
+    </a>
+
+    <h2>Qeydiyyatdan keçin</h2>
+    <form action="">
+      <div class="w-100 d-flex flex-row justify-content-between">
+        <input type="text" placeholder="Ad" />
+        <input type="text" placeholder="Soyad" />
+      </div>
+      <input type="email" name="" id="" placeholder="Email" />
+      <input type="password" name="" id="" placeholder="Şifrə" />
+      <input type="password" name="" id="" placeholder="Təkrar şifrə" />
+      <input type="submit" value="Qeydiyyat" />
+      <p>Hesabınız var? <a href="./login.html">Giriş edin</a></p>
+    </form>
+    <script>
+      $('.circle').each(function () {
+        let width = $(this).width();
+        $(this).height(width);
+      });
+    </script>
+  </body>
+</html>
