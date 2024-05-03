@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1700px) {
   #lessons {
     width: 100%;
     display: flex;
@@ -55,6 +55,137 @@
         &:hover{
             transform: scale(106%);
         }
+      }
+    }
+  }
+
+  #categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 50px 0;
+    padding: $section-padding;
+    .category{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 12px;
+      @include box-shadow ();
+      text-decoration: none;
+      i{
+        @include flex-center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 24px;
+        color: $green;
+        background-color: $light-green;
+      }
+      p{
+        margin: 0;
+        margin-left: 12px;
+        font-weight: 500;
+        color: #030303;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  #lessons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $section-padding;
+    h2 {
+      margin: 50px 0;
+    }
+    .lesson-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+      width: 100%;
+      .lesson {
+        padding: 12px;
+        border-radius: 20px;
+        background-color: #fff;
+        @include box-shadow();
+        cursor: pointer;
+        transition: all .4s ease;
+        text-decoration: none;
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+        p{
+          color: #030303;
+        }
+        .details {
+          p.title {
+            margin: 10px 0;
+            font-weight: 500;
+            font-size: 18px;
+          }
+          p.teacher {
+            font-size: 16px;
+            margin-bottom: 6px;
+          }
+          .rating {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 6px;
+            p {
+              margin: 0;
+              margin-left: 6px;
+            }
+            i {
+              color: #b4690e;
+            }
+          }
+        }
+        &:hover{
+            transform: scale(106%);
+        }
+      }
+    }
+  }
+
+  #categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 50px 0;
+    padding: $section-padding;
+    .category{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 12px;
+      @include box-shadow ();
+      text-decoration: none;
+      i{
+        @include flex-center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 24px;
+        color: $green;
+        background-color: $light-green;
+      }
+      p{
+        margin: 0;
+        margin-left: 12px;
+        font-weight: 500;
+        color: #030303;
       }
     }
   }

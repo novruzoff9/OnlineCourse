@@ -40,7 +40,7 @@
     gap: 10px;
   }
   #search-course form input[type=text] {
-    padding: 6px 12px;
+    padding: 8px 16px;
     border: 1px solid #ccc;
     outline: none;
     border-radius: 8px;
@@ -54,7 +54,7 @@
     outline: none;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1700px) {
   #lessons {
     width: 100%;
     display: flex;
@@ -114,6 +114,141 @@
   #lessons .lesson-list .lesson:hover {
     transform: scale(106%);
   }
+  #categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 50px 0;
+    padding: 20px 200px;
+  }
+  #categories .category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+  }
+  #categories .category i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #09b451;
+    background-color: #e1ffee;
+  }
+  #categories .category p {
+    margin: 0;
+    margin-left: 12px;
+    font-weight: 500;
+    color: #030303;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #lessons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 200px;
+  }
+  #lessons h2 {
+    margin: 50px 0;
+  }
+  #lessons .lesson-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+  #lessons .lesson-list .lesson {
+    padding: 12px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+  }
+  #lessons .lesson-list .lesson img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  #lessons .lesson-list .lesson p {
+    color: #030303;
+  }
+  #lessons .lesson-list .lesson .details p.title {
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  #lessons .lesson-list .lesson .details p.teacher {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  #lessons .lesson-list .lesson .details .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  #lessons .lesson-list .lesson .details .rating p {
+    margin: 0;
+    margin-left: 6px;
+  }
+  #lessons .lesson-list .lesson .details .rating i {
+    color: #b4690e;
+  }
+  #lessons .lesson-list .lesson:hover {
+    transform: scale(106%);
+  }
+  #categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 50px 0;
+    padding: 20px 200px;
+  }
+  #categories .category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+  }
+  #categories .category i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #09b451;
+    background-color: #e1ffee;
+  }
+  #categories .category p {
+    margin: 0;
+    margin-left: 12px;
+    font-weight: 500;
+    color: #030303;
+  }
 }
 @media only screen and (min-width: 600px) {
   #navbar {
@@ -138,10 +273,11 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    width: 600px;
+    width: 300px;
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    padding: 0;
   }
   #navbar .links li {
     text-decoration: none;

@@ -223,78 +223,79 @@
     display: none;
   }
 }
-body {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #eee !important;
-}
-
 @media only screen and (min-width: 600px) {
-  .logo {
-    width: 100px;
-    position: absolute;
-    top: 30px;
-    left: 80px;
-  }
-  .logo img {
-    width: 100%;
-  }
-  .circle {
-    width: 30vw;
-    border-radius: 50%;
-    background-color: #09b451;
-    position: absolute;
-  }
-  #right-top {
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-  }
-  #left-bottom {
-    left: 0;
-    bottom: 0;
-    transform: translate(-50%, 50%);
-  }
   h2 {
-    margin: 20px 0 !important;
-    color: #030303;
+    margin: 120px auto 60px auto !important;
+    text-align: center;
   }
-  form {
+  #socials-contactform {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 200px;
+  }
+  #socials-contactform .socials {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 14px;
-    width: 500px;
+    background-color: #1a191e;
+    padding: 120px 60px;
+    flex: 1;
+    margin: 0 80px;
+    border-radius: 24px;
   }
-  form input:not(input[type=button]) {
+  #socials-contactform .socials p.main-text {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    width: 70%;
+    text-align: left;
+  }
+  #socials-contactform .socials .social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  #socials-contactform .socials .social i {
+    color: white;
+    font-size: 48px;
+    margin-right: 20px;
+  }
+  #socials-contactform .socials .social p.data {
+    font-size: 22px;
+    margin: 0;
+    color: white;
+    font-weight: 500;
+  }
+  #socials-contactform .socials .social p.value {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+  }
+  #socials-contactform .contactform {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+  }
+  #socials-contactform .contactform p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  #socials-contactform .contactform input[type=text], #socials-contactform .contactform input[type=email], #socials-contactform .contactform textarea {
     padding: 8px 16px;
     border: 1px solid #ccc;
     outline: none;
     border-radius: 8px;
     margin-bottom: 20px;
-    text-align: center;
   }
-  form input[type=submit] {
+  #socials-contactform .contactform input[type=submit] {
     background-color: #09b451;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 8px;
     color: #fff;
     border: none;
     outline: none;
-    font-weight: 500;
   }
-  form p {
-    margin: 16px 0;
-    text-align: center;
-  }
-  form p a {
-    font-weight: 500;
-    text-decoration: none;
-  }
-}/*# sourceMappingURL=logins.css.map */
+}/*# sourceMappingURL=contact.css.map */

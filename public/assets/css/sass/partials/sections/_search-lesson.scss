@@ -15,18 +15,10 @@
         grid-template-columns: 4fr 1fr;
         gap: 10px;
       input[type='text'] {
-        padding: 6px 12px;
-        border: 1px solid #ccc;
-        outline: none;
-        border-radius: 8px;
+        @include input();
       }
       input[type='submit']{
-        background-color: $green;
-        padding: 6px 12px;
-        border-radius: 8px;
-        color: #fff;
-        border: none;
-        outline: none;
+        @include action-button($green);
       }
     }
   }

@@ -28,3 +28,18 @@ $mobile-section-padding: 20px;
   -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
+@mixin input {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 8px;
+}
+
+@mixin action-button($color) {
+  background-color: $color;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  outline: none;
+}
