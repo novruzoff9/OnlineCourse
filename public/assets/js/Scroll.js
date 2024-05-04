@@ -12,7 +12,7 @@ $(function() {
         $('.advantage').each(function() {
             var elementTop = $(this).offset().top;
 
-            if (scrollDistance + windowHeight - 300 >= elementTop) {
+            if (scrollDistance + windowHeight - 150 >= elementTop) {
                 $(this).addClass('show');
             } else {
                 $(this).removeClass('show');

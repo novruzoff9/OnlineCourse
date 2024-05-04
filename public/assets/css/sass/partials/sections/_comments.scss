@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $section-padding;
+    @include section-padding(20px);
     h2 {
       margin: 50px 0;
     }
@@ -101,50 +101,73 @@
     h2 {
       margin: 20px 0;
     }
-    #slider {
+    .slogan-slider {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
       width: 100%;
-      position: relative;
-      overflow: none;
-      height: 300px;
-      .slide {
-        padding: 16px;
-        border-radius: 16px;
-        background-color: #ccc;
-        display: none;
-        transition: all 0.5s ease;
-        position: absolute;
-        opacity: 0;
-        .person {
-          p {
+      .slogan {
+        display: flex;
+        flex-direction: row;
+        p {
+          flex: 2;
+          font-size: 32px;
+          font-weight: 500;
+          span {
+            color: $green;
+          }
+        }
+        .navigation {
+          flex: 1;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 15px;
+          align-items: center;
+          i {
+            @include flex-center;
+            color: $green;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $green;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+      .slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        position: relative;
+        height: 250px;
+        .comment {
+          width: 500px;
+          margin-right: 150px;
+          transition: all 0.5s ease;
+          opacity: 0;
+          position: absolute;
+          transform: translateX(210%);
+          p.writer {
+            color: $green;
             font-weight: 500;
+            font-size: 20px;
+            width: 500px;
           }
-        }
-        &.active {
-          width: 100%;
-          height: fit-content;
-          display: block !important;
-          margin: 0 20px;
-          margin-bottom: 20px;
-          opacity: 1;
-          background-color: $dutch-white;
-          .comment {
-            p {
-              margin: 0;
-            }
+          &.active {
+            height: fit-content;
+            opacity: 1;
+            transform: translateX(0);
           }
-        }
-        &.before-active {
-          transform: translateX(-150%);
-          @include active-sides();
-          display: none !important;
-        }
-        &.after-active {
-          transform: translateX(150%);
-          @include active-sides();
-          display: none !important;
+          &.before-active {
+            transform: translateX(-100%);
+            @include active-sides();
+            opacity: 0;
+          }
+          &.after-active {
+            @include active-sides();
+            transform: translateX(110%);
+            opacity: 1;
+          }
         }
       }
     }

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $section-padding;
+    @include section-padding(20px);
     h2 {
       margin: 50px 0;
       color: #333333;
@@ -48,7 +48,7 @@
           }
           p {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 500;
             line-height: 36px;
             text-align: left;
             margin: 0;
@@ -118,21 +118,78 @@
         transform 0.5s ease;
       transform: translateY(200px);
       .details {
-        width: 100%;
-        @include flex-center;
+        display: flex;
         flex-direction: column;
         h3 {
-          color: $dark-blue;
-          text-align: center;
+          color: #333333;
           font-size: 32px;
+          margin-top: 20px;
         }
-        p {
-          width: 100%;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 20px 0;
+            i {
+              @include flex-center;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              color: $green;
+              background-color: $light-green;
+            }
+            p {
+              font-size: 18px;
+              text-align: left;
+              margin: 0;
+              margin-left: 10px;
+            }
+          }
         }
       }
-      img {
-        width: 100%;
-        margin-bottom: 30px;
+      .image {
+        position: relative;
+        img {
+          border-radius: 25px;
+          width: 100%;
+        }
+        #certificate {
+          position: absolute;
+          right: -10px;
+          bottom: 20px;
+          background-color: #fff;
+          border-radius: 6px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 15px;
+          width: 120px;
+          @include box-shadow();
+          i {
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 18px;
+            color: $green;
+            background-color: $light-green;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 36px;
+            text-align: left;
+            margin: 0;
+            text-align: center;
+            span {
+              color: $green;
+            }
+          }
+        }
       }
     }
   }

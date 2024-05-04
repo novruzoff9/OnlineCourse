@@ -23,6 +23,15 @@ $mobile-section-padding: 20px;
   align-items: center;
 }
 
+@mixin section-padding($top) {
+  @media only screen and (min-width: 1500px){
+    padding: $top 12vw;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1499px){
+    padding: $top 5vw;
+  }
+}
+
 @mixin box-shadow {
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);

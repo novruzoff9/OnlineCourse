@@ -3,20 +3,20 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 100px 200px;
+    @include section-padding(100px);
     #welcome {
       background-color: #f2f2f2;
       height: 85vh;
       display: grid;
       grid-template-columns: 3fr 2fr;
-      padding: 20px 60px;
+      padding: 20px 0 20px 60px;
       border-radius: 50px;
       #slogan-sign {
         display: flex;
         justify-content: center;
         flex-direction: column;
         p {
-          width: 589px;
+          max-width: 589px;
           font-size: 60px;
           font-weight: 700;
           line-height: 90px;
@@ -27,7 +27,7 @@
         }
         a {
           @include flex-center;
-          width: 190px;
+          width: 200px;
           height: 60px;
           padding: 14px 28px;
           gap: 10px;
@@ -35,7 +35,7 @@
           background-color: $green;
           color: white;
           font-size: 16px;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 20px;
           text-decoration: none;
         }
@@ -67,7 +67,7 @@
           }
           p.count {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 500;
             line-height: 36px;
             text-align: left;
             color: $green;
@@ -94,7 +94,7 @@
           width: 180px;
           p {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 500;
             line-height: 30px;
             text-align: center;
             margin: 0;
@@ -133,7 +133,7 @@
           background-color: $green;
           color: white;
         }
-        p{
+        p {
           font-size: 18px;
           margin: 0;
           margin-left: 10px;
@@ -145,93 +145,120 @@
 
 @media only screen and (max-width: 600px) {
   #home {
-    background: rgb(234, 251, 245);
-    background: linear-gradient(
-      135deg,
-      rgba(234, 251, 245, 1) 0%,
-      rgba(225, 220, 240, 1) 100%
-    );
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 60px);
     padding: $mobile-section-padding;
-    .logo-slogan {
-      margin-top: 100px;
-      @include flex-center;
+    margin-top: 60px;
+    #welcome {
+      display: flex;
       flex-direction: column;
-      height: 85vh;
-      .welcome {
-        @include flex-center;
+      #slogan-sign {
+        display: flex;
+        justify-content: center;
         flex-direction: column;
-        .slogan {
-          @include flex-center;
-          flex-direction: column;
-          h1 {
-            font-size: 34px;
-            color: $light-blue;
-          }
-          p {
-            color: $dark-grey;
-            margin: 16px 0;
-          }
-        }
-        span {
-          position: relative;
-          color: $dark-purple;
-          &::before {
-            content: '';
-            background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-2.png);
-            width: 160px;
-            height: 31px;
-            position: absolute;
-            background-size: 162px;
-            top: 32px;
-            left: 69px;
-          }
-          &::after {
-            content: '';
-            background-image: url(https://www.muellim.az/assets/frontend/default-new/image/h-1-bn-shape-1.png);
-            width: 35px;
-            height: 36px;
-            position: absolute;
-            background-size: 35px;
-            top: 8px;
+        p {
+          max-width: 589px;
+          font-size: 32px;
+          font-weight: 600;
+          text-align: left;
+          span {
+            color: $green;
           }
         }
       }
-      .img {
-        display: none;
+      #image {
+        @include flex-center;
+        position: relative;
+        margin-top: 30px;
+        img {
+          width: 80%;
+          border-radius: 25px;
+        }
+        #student-count {
+          position: absolute;
+          right: 0;
+          bottom: 40px;
+          background-color: #fff;
+          border-radius: 6px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 15px;
+          i {
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: $green;
+            background-color: $light-green;
+          }
+          p.count {
+            font-size: 20px;
+            font-weight: 500;
+            text-align: left;
+            color: $green;
+            margin: 0;
+          }
+          p.student {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            margin: 0;
+          }
+        }
+        #teachers {
+          position: absolute;
+          left: 0;
+          bottom: 120px;
+          background-color: #fff;
+          border-radius: 6px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 15px;
+          width: 140px;
+          p {
+            font-size: 10px;
+            font-weight: 500;
+            text-align: center;
+            margin: 0;
+            span {
+              color: $green;
+            }
+          }
+        }
       }
     }
     #counts {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 10px;
+      grid-template-columns: 1fr 1fr;
       width: 100%;
+      margin-top: 30px;
+      gap: 20px;
       .stat {
-        flex: 1;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
-        border: 2px solid $dark-grey;
-        flex: 1;
         padding: 8px 12px;
         border-radius: 8px;
+        background-color: $light-blue;
         i {
-          display: none;
+          @include flex-center;
+          width: 30px !important;
+          height: 30px;
+          border-radius: 50%;
+          font-size: 16px;
+          background-color: $green;
+          color: white;
         }
-        p.value {
-          font-weight: 500;
-          font-size: 26px;
+        p {
+          width: calc(100% - 40px);
+          font-size: 14px;
           margin: 0;
-          color: $dark-blue;
-        }
-        p.data {
-          font-size: 24px;
-          margin: 0;
-          color: $dark-blue;
+          margin-left: 6px;
         }
       }
     }

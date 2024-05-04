@@ -1,7 +1,11 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .getstart-btn {
   padding: 8px 16px;
   font-weight: 500;
-  background-color: #7608fa;
+  background-color: #09b451;
   outline: none;
   border: none;
   color: white;
@@ -106,7 +110,7 @@
 }
 @media only screen and (max-width: 600px) {
   #navbar {
-    width: 100%;
+    width: 100vw;
     padding: 20px;
     height: 60px;
     display: flex;
