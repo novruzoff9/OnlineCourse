@@ -38,12 +38,12 @@
       </a>
       <ul class="links">
         <li><a href="./courses.html">Dərslər</a></li>
-        <li><a href="#">Kateqoriyalar</a></li>
-        <li><a href="#">Əlaqə</a></li>
+        <li><a href="./categories.html">Kateqoriyalar</a></li>
+        <li><a href="./contact.html">Əlaqə</a></li>
       </ul>
       <div class="login">
-        <a href="#" class="sign-btn">Daxil ol</a>
-        <a href="#" class="reg-btn">Qeydiyyat</a>
+        <a href="./login.html" class="sign-btn">Daxil ol</a>
+        <a href="./signup.html" class="reg-btn">Qeydiyyat</a>
       </div>
       <i id="mobile-menubtn" class="fas fa-bars"></i>
     </header>
@@ -51,12 +51,12 @@
     <aside id="mobile-navbar">
       <ul class="links">
         <li><a href="./courses.html">Dərslər</a></li>
-        <li><a href="#">Kateqoriyalar</a></li>
-        <li><a href="#">Əlaqə</a></li>
+        <li><a href="./categories.html">Kateqoriyalar</a></li>
+        <li><a href="./contact.html">Əlaqə</a></li>
       </ul>
       <div class="login">
-        <a href="#" class="sign-btn">Daxil ol</a>
-        <a href="#" class="reg-btn">Qeydiyyat</a>
+        <a href="./login.html" class="sign-btn">Daxil ol</a>
+        <a href="./signup.html" class="reg-btn">Qeydiyyat</a>
       </div>
     </aside>
 
@@ -70,29 +70,34 @@
       </form>
     </div>
 
-    <div id="categories">
-      <a href="#" class="category">
-        <i class="fas fa-laptop-code"></i>
-        <p>İKT və Proqramlaşdırma</p>
-      </a>
-      <a href="#" class="category">
-        <i class="fas fa-globe"></i>
-        <p>Xarici dil</p>
-      </a>
-      <a href="#" class="category">
-        <i class="fas fa-chart-line"></i>
-        <p>Fərdi inkişaf</p>
-      </a>
-      <a href="#" class="category">
-        <i class="far fa-money-bill-alt"></i>
-        <p>Marketinq</p>
-      </a>
-      <a href="#" class="category">
-        <i class="fab fa-react"></i>
-        <p>Digər kurslar</p>
-      </a>
-    </div>
-    <div id="lessons">
+    <section id="categories">
+      <h2 class="header-title">Tədris kateqoriyaları</h2>
+      <h5>Sizə uyğun kateqoriyanı seçin və öyrənməyə başlayın!</h5>
+      <div id="categories-list">
+        <a href="#" class="category">
+          <p class="title">Xarici dil</p>
+          <p class="caption">Hər dildə sərbəst danışın</p>
+          <img src="assets/img/Categories/Language.jpg" alt="">
+        </a>
+        <a href="#" class="category">
+          <p class="title">Proqramlaşdırma</p>
+          <p class="caption">Gələcəyi quranlardan biri də siz olun!</p>
+          <img src="assets/img/Categories/Prograaming.jpg" alt="">
+        </a>
+        <a href="#" class="category">
+          <p class="title">Dizayn</p>
+          <p class="caption">Hər dildə sərbəst danışın</p>
+          <img src="assets/img/Categories/Design.jpg" alt="">
+        </a>
+        <a href="#" class="category">
+          <p class="title">Fərdi inkişaf</p>
+          <p class="caption">İnsan təbiətini tam şəkildə öyrənin!</p>
+          <img src="assets/img/Categories/Self_Development.jpg" alt="">
+        </a>
+      </div>
+    </section>
+    <section id="lessons">
+      <h2>Bütün Dərslər</h2>
       <div class="lesson-list">
         <a href="#" class="lesson">
           <img
@@ -227,7 +232,7 @@
           </div>
         </a>
       </div>
-    </div>
+    </section>
 
     <div id="pagedlist">
       <i class="fas fa-backward"></i>
@@ -248,6 +253,11 @@
     <script>
       $(document).ready(function () {
         $('.lesson img').each(function () {
+          var width = $(this).width();
+          $(this).height((width / 16) * 9);
+        });
+
+        $('.category img').each(function () {
           var width = $(this).width();
           $(this).height((width / 16) * 9);
         });

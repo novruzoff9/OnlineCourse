@@ -42,7 +42,7 @@
       </a>
       <ul class="links">
         <li><a href="./courses.html">Dərslər</a></li>
-        <li><a href="#">Kateqoriyalar</a></li>
+        <li><a href="./categories.html">Kateqoriyalar</a></li>
         <li><a href="./contact.html">Əlaqə</a></li>
       </ul>
       <div class="login">
@@ -55,7 +55,7 @@
     <aside id="mobile-navbar">
       <ul class="links">
         <li><a href="./courses.html">Dərslər</a></li>
-        <li><a href="#">Kateqoriyalar</a></li>
+        <li><a href="./categories.html">Kateqoriyalar</a></li>
         <li><a href="./contact.html">Əlaqə</a></li>
       </ul>
       <div class="login">
@@ -105,7 +105,34 @@
       </div>
     </section>
 
-    <div id="lessons">
+    <section id="categories">
+      <h2 class="header-title">Tədris kateqoriyaları</h2>
+      <h5>Sizə uyğun kateqoriyanı seçin və öyrənməyə başlayın!</h5>
+      <div id="categories-list">
+        <a href="#" class="category">
+          <p class="title">Xarici dil</p>
+          <p class="caption">Hər dildə sərbəst danışın</p>
+          <img src="assets/img/Categories/Language.jpg" alt="">
+        </a>
+        <a href="#" class="category">
+          <p class="title">Proqramlaşdırma</p>
+          <p class="caption">Gələcəyi quranlardan biri də siz olun!</p>
+          <img src="assets/img/Categories/Prograaming.jpg" alt="">
+        </a>
+        <a href="#" class="category">
+          <p class="title">Dizayn</p>
+          <p class="caption">Hər dildə sərbəst danışın</p>
+          <img src="assets/img/Categories/Design.jpg" alt="">
+        </a>
+        <a href="#" class="category">
+          <p class="title">Fərdi inkişaf</p>
+          <p class="caption">İnsan təbiətini tam şəkildə öyrənin!</p>
+          <img src="assets/img/Categories/Self_Development.jpg" alt="">
+        </a>
+      </div>
+    </section>
+
+    <section id="lessons">
       <h2>Ən çox alınan dərslər</h2>
       <div class="lesson-list">
         <a href="#" class="lesson">
@@ -223,30 +250,7 @@
           </div>
         </a>
       </div>
-    </div>
-
-    <div id="categories">
-      <a href="#" class="category">
-        <i class="fas fa-laptop-code"></i>
-        <p>İKT və Proqramlaşdırma</p>
-      </a>
-      <a href="#" class="category">
-        <i class="fas fa-globe"></i>
-        <p>Xarici dil</p>
-      </a>
-      <a href="#" class="category">
-        <i class="fas fa-chart-line"></i>
-        <p>Fərdi inkişaf</p>
-      </a>
-      <a href="#" class="category">
-        <i class="far fa-money-bill-alt"></i>
-        <p>Marketinq</p>
-      </a>
-      <a href="#" class="category">
-        <i class="fab fa-react"></i>
-        <p>Digər kurslar</p>
-      </a>
-    </div>
+    </section>
 
     <section id="advantages">
       <h2>Üstünlüklərimiz</h2>
@@ -279,7 +283,7 @@
       </div>
     </section>
 
-    <div id="comments">
+    <section id="comments">
       <h2>Rəylər</h2>
       <div class="slogan-slider">
         <div class="slogan">
@@ -357,7 +361,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <section id="content">
       <h2>Tədris kontenti</h2>
@@ -379,101 +383,9 @@
 
     <div id="contact"></div>
 
-    <script>
-      const count = $('.slide').length;
-      function ChangeActive() {
-        var activeIndex = $('.slide.active').index('.slide');
-
-        $('.slide')
-          .eq(activeIndex)
-          .removeClass('active')
-          .addClass('before-active');
-        $('.slide')
-          .eq(activeIndex - 1)
-          .removeClass('before-active');
-
-        activeIndex++;
-        if (activeIndex === count - 1) {
-          activeIndex = 1;
-          $('.slide').removeClass('before-active');
-          $('.slide').removeClass('after-active');
-          $('.slide')
-            .eq(activeIndex - 1)
-            .addClass('before-active');
-          $('.slide').eq(activeIndex).addClass('after-active');
-        }
-
-        $('.slide')
-          .eq(activeIndex)
-          .removeClass('after-active')
-          .addClass('active');
-        $('.slide')
-          .eq(activeIndex + 1)
-          .addClass('after-active');
-      }
-
-      var loopInterval = setInterval(ChangeActive, 3000);
-
-      $('#nextcomment').click(function () {
-        var afterIndex = $('.slide.active').index('.slide') + 1;
-        if (afterIndex === count) {
-          afterIndex = 0;
-        }
-        $('.slide')
-          .eq(afterIndex - 2)
-          .removeClass('before-active');
-        $('.slide')
-          .eq(afterIndex)
-          .removeClass('after-active')
-          .addClass('active');
-        $('.slide')
-          .eq(afterIndex - 1)
-          .removeClass('active')
-          .addClass('before-active');
-        $('.slide')
-          .eq(afterIndex + 1)
-          .addClass('after-active');
-        if (afterIndex === count - 1) {
-          $('.slide').eq(0).addClass('after-active');
-        }
-      });
-
-      $('#prevcomment').click(function () {
-        var prevIndex = $('.slide.active').index('.slide') - 1;
-        //if(afterIndex === -1) {afterIndex = 0;}
-        $('.slide')
-          .eq(prevIndex)
-          .removeClass('before-active')
-          .addClass('active');
-        $('.slide')
-          .eq(prevIndex - 1)
-          .addClass('before-active');
-        $('.slide')
-          .eq(prevIndex + 1)
-          .removeClass('active')
-          .addClass('after-active');
-        $('.slide')
-          .eq(prevIndex + 2)
-          .removeClass('after-active');
-        // if(prevIndex === count - 1){
-        //   $('.slide')
-        //   .eq(0)
-        //   .addClass('after-active');
-        // }
-      });
-    </script>
+    <script src="./assets/js/Slider.js"></script>
 
     <script>
-      $('.links li').click(function () {
-        var target = $(this).attr('data-link');
-        $('html, body').animate(
-          {
-            scrollTop: $(target).offset().top - 60
-          },
-          600
-        );
-      });
-
       $('#mobile-menubtn').click(function () {
         $('#mobile-navbar').toggleClass('show');
       });
@@ -481,6 +393,11 @@
     <script>
       $(document).ready(function () {
         $('.lesson img').each(function () {
+          var width = $(this).width();
+          $(this).height((width / 16) * 9);
+        });
+
+        $('.category img').each(function () {
           var width = $(this).width();
           $(this).height((width / 16) * 9);
         });
